@@ -1,0 +1,14 @@
+C:\Users\willi\source\repos\c#\TpBanque\TpBanque\bin\Debug\TpBanque.exe.config
+C:\Users\willi\source\repos\c#\TpBanque\TpBanque\bin\Debug\TpBanque.exe
+C:\Users\willi\source\repos\c#\TpBanque\TpBanque\bin\Debug\TpBanque.pdb
+C:\Users\willi\source\repos\c#\TpBanque\TpBanque\obj\Debug\TpBanque.csprojAssemblyReference.cache
+C:\Users\willi\source\repos\c#\TpBanque\TpBanque\obj\Debug\TpBanque.csproj.CoreCompileInputs.cache
+C:\Users\willi\source\repos\c#\TpBanque\TpBanque\obj\Debug\TpBanque.exe
+C:\Users\willi\source\repos\c#\TpBanque\TpBanque\obj\Debug\TpBanque.pdb
+C:\Users\SalahEddine\Desktop\Nouveau dossier\projects\c#\TpBanque\TpBanque\bin\Debug\TpBanque.exe.config
+C:\Users\SalahEddine\Desktop\Nouveau dossier\projects\c#\TpBanque\TpBanque\bin\Debug\TpBanque.exe
+C:\Users\SalahEddine\Desktop\Nouveau dossier\projects\c#\TpBanque\TpBanque\bin\Debug\TpBanque.pdb
+C:\Users\SalahEddine\Desktop\Nouveau dossier\projects\c#\TpBanque\TpBanque\obj\Debug\TpBanque.csprojAssemblyReference.cache
+C:\Users\SalahEddine\Desktop\Nouveau dossier\projects\c#\TpBanque\TpBanque\obj\Debug\TpBanque.csproj.CoreCompileInputs.cache
+C:\Users\SalahEddine\Desktop\Nouveau dossier\projects\c#\TpBanque\TpBanque\obj\Debug\TpBanque.exe
+C:\Users\SalahEddine\Desktop\Nouveau dossier\projects\c#\TpBanque\TpBanque\obj\Debug\TpBanque.pdb
