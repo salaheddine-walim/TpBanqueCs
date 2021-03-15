@@ -41,5 +41,9 @@ namespace TpBanque
             return this.valeur - somme.valeur >= 0;
         }
 
+        public static MAD operator*(MAD s1,double d)
+        {
+            return new MAD(s1.valeur * d);
+        }
     }
 }

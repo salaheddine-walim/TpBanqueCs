@@ -11,8 +11,8 @@ namespace TpBanque
         private static MAD plafond;
         private static int cpt;
         private int num_compte;
-        private readonly Client titulaire;
-        private MAD solde;
+        protected readonly Client titulaire;
+        protected MAD solde;
 
         public Compte(Client c)
         {

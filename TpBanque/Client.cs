@@ -8,8 +8,8 @@ namespace TpBanque
 {
     class Client
     {
-        private  readonly string nom;
-        private readonly string prenom;
+        protected  readonly string nom;
+        protected readonly string prenom;
         private  string adresse;
 
         public Client( string nom,string prenom,string adresse)
