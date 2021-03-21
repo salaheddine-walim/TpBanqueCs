@@ -13,12 +13,15 @@ namespace TpBanque
         private int num_compte;
         protected readonly Client titulaire;
         protected MAD solde;
+        private List<Operation> lop;
 
         public Compte(Client c)
         {
             num_compte = ++cpt;
             this.titulaire = c;
             solde = new MAD(0);
+            lop = new List<Operation>();
+            c.liste_comptes.Add(this);
         }
         static Compte()
         {
@@ -28,11 +31,13 @@ namespace TpBanque
 
         public bool debiter(MAD somme)
         {
+            string op = "Debitement";
             if (somme > new MAD(0) )
             {
                 if (solde.comparer(somme) && plafond.comparer(somme))
                 {
                     this.solde -=somme;
+                    lop.Add(new Operation(op, somme,true));
                     return true;
                 }
                 else if(somme > plafond)
@@ -52,9 +57,11 @@ namespace TpBanque
 
         public bool crediter(MAD somme)
         {
+            string op = "Creditement";
             if (somme > new MAD(0))
             {
                 this.solde += somme;
+                lop.Add(new Operation(op, somme,false));
                 return true;
             }
             Console.WriteLine("impossible !!! somme negatif");
@@ -64,7 +71,9 @@ namespace TpBanque
         public bool verser(Compte c,MAD somme)
         {
             if (this.debiter(somme) && c.crediter(somme))
+            {
                 return true;
+            }
             return false;
         }
 
@@ -73,6 +82,20 @@ namespace TpBanque
             Console.WriteLine("Compte : "+num_compte);
             this.titulaire.afficher();
             this.solde.afficher();
+        }
+
+        public void afficher_opeartions()
+        {
+            if (lop.Count > 0)
+            {
+                Console.WriteLine("\nListe des operations");
+                foreach (Operation operation in lop)
+                {
+                    operation.afficher();
+                }
+                return;
+            }
+            Console.WriteLine("\nCompte vierge");
         }
     }
 }

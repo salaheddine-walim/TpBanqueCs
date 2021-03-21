@@ -16,7 +16,7 @@ namespace TpBanque
         }
         public void afficher()
         {
-            Console.WriteLine(valeur+" MAD");
+            Console.Write(valeur+" MAD\n");
         }
 
         public static MAD operator-(MAD somme1,MAD somme)

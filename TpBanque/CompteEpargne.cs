@@ -11,11 +11,16 @@ namespace TpBanque
         private double TauxInteret;
         public CompteEpargne(Client c,double t ):base(c)
         {
-            this.TauxInteret = t;
+            if (t >= 0 && t <= 100)
+            {
+                this.TauxInteret = t;
+            }
+            else
+                throw new Exception("Taux d'interet non valide");
         }
         public void calculInteret()
         {
-            this.solde *= TauxInteret;
+            this.solde =solde+(solde*TauxInteret);
         }
 
     }
