@@ -18,6 +18,7 @@ namespace TpBanque
             elon.crediter(new MAD(10000));
             elon.debiter(new MAD(200));
             salah.verser(elon, new MAD(300));
+            Console.WriteLine("salaheddine");
 
             c.afficherListeComptes();
         }
