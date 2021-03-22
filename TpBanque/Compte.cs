@@ -13,7 +13,7 @@ namespace TpBanque
         private int num_compte;
         protected readonly Client titulaire;
         protected MAD solde;
-        private List<Operation> lop;
+        public List<Operation> lop;
 
         public Compte(Client c)
         {
@@ -29,7 +29,7 @@ namespace TpBanque
             cpt = 0;
         }
 
-        public bool debiter(MAD somme)
+        public virtual bool debiter(MAD somme)
         {
             string op = "Debitement";
             if (somme > new MAD(0) )

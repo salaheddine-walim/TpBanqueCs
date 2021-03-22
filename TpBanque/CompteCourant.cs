@@ -14,5 +14,27 @@ namespace TpBanque
             this.decouvert = decouvert;
         }
 
+        public override bool debiter(MAD somme)
+        {
+            string op = "Debitement";
+            if (somme > new MAD(0))
+            {
+                if (solde.comparer(somme+decouvert))
+                {
+                    this.solde -= somme;
+                    lop.Add(new Operation(op, somme, true));
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine("impossible !!! Decouvert ");
+                    return false;
+                }
+            }
+            Console.WriteLine("impossible !!! somme negatif");
+            return false;
+        }
+
+
     }
 }

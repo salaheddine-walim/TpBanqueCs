@@ -20,7 +20,7 @@ namespace TpBanque
         }
         public void calculInteret()
         {
-            this.solde =solde+(solde*TauxInteret);
+            this.solde =solde+solde*(TauxInteret/100);
         }
 
     }
