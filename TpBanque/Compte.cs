@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace TpBanque
 {
-    class Compte
+    abstract class Compte
     {
         private static MAD plafond;
         private static int cpt;
         private int num_compte;
-        protected readonly Client titulaire;
-        protected MAD solde;
+        private readonly Client titulaire;
+        private MAD solde;
         public List<Operation> lop;
 
         public Compte(Client c)
@@ -28,7 +28,6 @@ namespace TpBanque
             plafond = new MAD(2000);
             cpt = 0;
         }
-
         public virtual bool debiter(MAD somme)
         {
             string op = "Debitement";
@@ -79,7 +78,7 @@ namespace TpBanque
 
         public void consulter()
         {
-            Console.WriteLine("Compte : "+num_compte);
+            Console.WriteLine("Compte : " +num_compte);
             this.titulaire.afficher();
             this.solde.afficher();
         }
@@ -96,6 +95,27 @@ namespace TpBanque
                 return;
             }
             Console.WriteLine("\nCompte vierge");
+        }
+
+        public void add(MAD somme)
+        {
+            this.solde += somme;
+        }
+        public void minus(MAD somme)
+        {
+            this.solde -= somme;
+        }
+        public bool comparer(MAD somme)
+        {
+            return this.solde.comparer(somme);
+        }
+        public void addWithTaux(double t)
+        {
+            this.solde += solde *( t / 100);
+        }
+        public bool moitieSolde(MAD somme)
+        {
+            return solde.moitieSolde(somme);
         }
     }
 }

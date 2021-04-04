@@ -40,10 +40,17 @@ namespace TpBanque
         {
             return this.valeur - somme.valeur >= 0;
         }
+        
 
         public static MAD operator*(MAD s1,double d)
         {
             return new MAD(s1.valeur * d);
+        }
+        public double conversion(double d) => this.valeur * d; 
+
+        public bool moitieSolde(MAD somme)
+        {
+            return this.valeur > (somme.valeur * 2);
         }
     }
 }

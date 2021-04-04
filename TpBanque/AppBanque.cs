@@ -11,8 +11,8 @@ namespace TpBanque
         public void test()
         {
             Client c = new Client("Salaheddine", "Walim", "Mabrouka");
-            Compte salah = new Compte(c);
-            Compte elon = new Compte(c);
+            Compte salah = new CompteCourant(new MAD(1000),c);
+            Compte elon = new CompteEpargne(c, 3);
 
             salah.crediter(new MAD(2000));
             elon.crediter(new MAD(10000));

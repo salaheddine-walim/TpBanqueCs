@@ -18,9 +18,15 @@ namespace TpBanque
             else
                 throw new Exception("Taux d'interet non valide");
         }
+        public override bool debiter(MAD somme)
+        {
+            if (this.moitieSolde(somme))
+                return base.debiter(somme);
+            return false;
+        }
         public void calculInteret()
         {
-            this.solde =solde+solde*(TauxInteret/100);
+            this.addWithTaux(-1);
         }
 
     }

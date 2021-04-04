@@ -9,25 +9,27 @@ namespace TpBanque
     class CompteCourant:Compte
     {
         private MAD decouvert;
-        public CompteCourant(MAD decouvert,Client c):base(c)
+        private CarteBancaire carteBancaire;
+        public CompteCourant(MAD decouvert,Client c,CarteBancaire carteBancaire=null):base(c)
         {
             this.decouvert = decouvert;
+            this.carteBancaire = carteBancaire;
         }
 
         public override bool debiter(MAD somme)
         {
-            string op = "Debitement";
+            string op = "Debitage";
             if (somme > new MAD(0))
             {
-                if (solde.comparer(somme+decouvert))
+                if (this.comparer(somme+decouvert))
                 {
-                    this.solde -= somme;
+                    this.minus(somme);
                     lop.Add(new Operation(op, somme, true));
                     return true;
                 }
                 else
                 {
-                    Console.WriteLine("impossible !!! Decouvert ");
+                    Console.WriteLine("impossible !!! Decouvert");
                     return false;
                 }
             }

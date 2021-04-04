@@ -17,7 +17,7 @@ namespace TpBanque
         public Operation(string libelle,MAD montant,bool minus)
         {
             this.ref_op = ++cpt;
-            this.date_op = DateTime.Now;
+            this.date_op = DateTime.Today;
             this.libelle = libelle;
             this.montant = montant;
             this.minus = minus;
